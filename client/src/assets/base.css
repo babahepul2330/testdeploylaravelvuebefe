@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn.btn-frame {
+  @apply btn-neutral;
+}
+
+.btn.btn-frame-outline {
+  @apply btn-outline bg-base-100;
+}
+
+.btn.btn-frame-outline:hover {
+  @apply border-neutral;
+}
+
+.btn.btn-frame-outline.btn-success {
+  @apply bg-green-100 text-neutral;
+}
+
+.btn.btn-frame-outline.btn-success:hover {
+  @apply bg-green-200 text-neutral border-neutral;
+}
+
+.btn.btn-frame-outline.btn-warning {
+  @apply bg-yellow-100 text-neutral;
+}
+
+.btn.btn-frame-outline.btn-warning:hover {
+  @apply bg-yellow-200 text-neutral border-neutral;
+}
+
+.btn.btn-frame-outline.btn-danger {
+  @apply bg-red-100 text-neutral;
+}
+
+.btn.btn-frame-outline.btn-danger:hover {
+  @apply bg-red-200 text-neutral border-neutral;
+}
+
+.box-frame {
+  @apply border-2 border-neutral text-neutral bg-base-100 rounded-none;
+}
+
+.select.select-bordered,
+.textarea.textarea-bordered,
+.file-input.file-input-bordered,
+.input.input-bordered {
+  @apply border-2 border-neutral;
+}
+
+.select.select-bordered:focus,
+.textarea.textarea-bordered:focus,
+.file-input.file-input-bordered:focus,
+.input.input-bordered:focus {
+  @apply border-2 border-neutral outline-2 outline-offset-1 outline-neutral/80;
+}
+
+.VueHotToast__toast-container.VueHotToast__top-right {
+  @apply pt-16;
+}
+
+.VueHotToast__toast-container .VueHotToast__toast {
+  @apply box-frame rounded-none shadow-none;
+}
+
+.menu li a.active {
+  @apply box-frame bg-purple-100 text-primary !important;
+}
+
+.menu li a.active:hover {
+  @apply bg-purple-200 text-neutral !important;
+}
